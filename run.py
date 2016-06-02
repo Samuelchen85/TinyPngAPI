@@ -74,6 +74,7 @@ def main():
             for file in os.listdir(src_dir):
                 if check_file_format(file):
                     logging.info('[%d] Compressing file: %s', counter, file)
+                    counter = counter + 1
                     src_file = src_dir + os.sep + file
                     dest_file = src_dir + os.sep + file
                     if dest_dir:
