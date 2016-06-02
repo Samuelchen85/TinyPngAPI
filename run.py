@@ -81,8 +81,8 @@ def main():
                         dest_file = dest_dir + os.sep + file
                     compress_local_file(src_file, dest_file)
     try:
-        quota_left_monthly = tinify.compression_count
-        logging.info('\nYou can still compress %s images this month', quota_left_monthly)
+        quota_left_monthly = 500 - int(tinify.compression_count)
+        logging.info('\nYou can still compress %d images this month', quota_left_monthly)
     except Exception as e:
         logging.error(e.message)
 
